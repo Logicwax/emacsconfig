@@ -8,5 +8,12 @@
 1. Clone .emacs.d directory
 
     ```bash
-    git clone https://github.com/logicwax/emacsconfig.git ~/.emacs.d/
+    git clone https://github.com/logicwax/emacsconfig.git ~/.emacs.d
     ```
+
+or alternatively,
+
+    ```bash
+    git clone git@github.com:Logicwax/emacsconfig ~/.emacs.d
+    ```
+
