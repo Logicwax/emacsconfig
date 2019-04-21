@@ -3,18 +3,17 @@
 <http://github.com/logicwax/emacsconfig>
 
 
-## Usage / Installation ##
+# Usage / Installation #
 
-1. Clone .emacs.d directory
+Clone .emacs.d directory
 
-    ```bash
-    git clone https://github.com/logicwax/emacsconfig.git ~/.emacs.d
-    ```
+ ```
+git clone https://github.com/logicwax/emacsconfig.git ~/.emacs.d
+```
+ 
+Or alternatively
 
-or alternatively,
-
-    ```bash
-    git clone git@github.com:Logicwax/emacsconfig ~/.emacs.d
-    ```
-
+ ```
+git clone https://github.com/logicwax/emacsconfig.git ~/.emacs.d
+```
 
