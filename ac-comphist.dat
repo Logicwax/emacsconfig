@@ -1,0 +1,134 @@
+((("srcdir" .
+   [1 0 0 0 0 0])
+  ("pk_srcdir" .
+   [1 0 0 1 0 0 0 0 0])
+  ("thgat" .
+   [1 0 0 0 0])
+  ("global-map" .
+   [0 0 0 0 0 0 1 0 0 0])
+  ("blockinfile" .
+   [1 0 0 0 0 1 0 0 0 0 0])
+  ("dest" .
+   [1 0 0 0])
+  ("memset" .
+   [0 0 0 0 1 1])
+  ("string" .
+   [1 0 0 0 0 0])
+  ("bgv" .
+   [1 0 0])
+  ("pin" .
+   [1 0 0])
+  ("fefekfk" .
+   [0 0 0 0 1 0 0])
+  ("/home/build/freedom-u-sdk/buildroot" .
+   [0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("/lib/systemd/system/haveged" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("sifive" .
+   [1 0 0 0 0 0])
+  ("git" .
+   [2 0 0])
+  ("WORKDIR" .
+   [4 0 0 0 0 0 0])
+  ("RUN" .
+   [7 0 0])
+  ("text" .
+   [1 0 0 0])
+  ("willium" .
+   [0 0 0 0 1 0 0])
+  ("will" .
+   [1 0 1 0])
+  ("what" .
+   [2 0 0 0])
+  ("highlight-parentheses" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0])
+  ("highlight-numbers-mode" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("highlight-numbers" .
+   [0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0])
+  ("add-hook" .
+   [1 0 0 0 0 0 0 0])
+  ("auto-complete-mode-major-mode" .
+   [0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("BR2_ARCH" .
+   [0 0 0 0 0 0 0 1])
+  ("BR2_VERSION_FULL" .
+   [0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0])
+  ("export" .
+   [1 0 0 0 0 0])
+  ("RUNNING_MAKE_VERSION" .
+   [0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("UMASK" .
+   [0 0 1 0 0])
+  ("powerline-default-theme" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0])
+  ("setq" .
+   [1 0 0 0])
+  ("neotree-toggle" .
+   [1 0 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("neotree" .
+   [1 0 0 0 0 0 0])
+  ("powerline-vc" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("auto-complete-1" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("auto-complete-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("BR_GRAPH_OUT" .
+   [0 0 0 1 0 0 0 0 0 0 0 0])
+  ("highlight-indent-guides-mode" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1])
+  ("if" .
+   [1 0])
+  ("BR2_GRAPH_OUT" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("checkout" .
+   [0 0 1 0 0 0 0 0])
+  ("freedom-u-sdk/buildroot" .
+   [0 0 0 0 0 1 0 2 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0])
+  ("freedom-u-sdk" .
+   [0 0 0 0 0 0 0 0 0 1 0 0 0])
+  ("build" .
+   [1 0 0 0 0])
+  ("/home/build/freedom-u-sdk/" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0])
+  ("hello" .
+   [2 0 0 0 0])
+  ("line" .
+   [1 0 0 0])
+  ("lineinfile" .
+   [2 0 0 0 0 0 0 0 0 0])
+  ("/dev/null" .
+   [0 0 0 0 0 0 1 0 0])
+  ("CK_ATTRIBUTE" .
+   [1 0 0 0 0 0 0 0 0 0 0 1])
+  ("whatever" .
+   [1 0 0 0 0 1 0 0])
+  ("CK_MECHANISM_PTR" .
+   [0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("CK_ATTRIBUTE_PTR" .
+   [0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0])
+  ("airline-display-directory" .
+   [0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0])
+  ("spik" .
+   [0 0 0 1])
+  ("spike" .
+   [1 0 0 0 0])
+  ("all" .
+   [3 0 0])
+  ("that" .
+   [5 0 0 0])
+  ("qemu_wrkdir" .
+   [0 0 0 0 1 0 0 0 0 0 0])
+  ("why" .
+   [1 0 0])
+  ("MAKE" .
+   [1 0 0 0])
+  ("install" .
+   [2 0 0 0 0 0 0])
+  ("fesvr_srcdir" .
+   [0 0 0 0 0 0 0 0 0 0 0 1])
+  ("know" .
+   [1 0 0 0])
+  ("mean" .
+   [1 0 0 0])))

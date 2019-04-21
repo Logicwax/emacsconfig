@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "pact-mode" "20180905.1647" "Mode for Pact, a LISPlike smart contract language." '((emacs "24.3")) :commit "e4e4487c1d55b3fb8775abd948be28442efcffec" :keywords '("pact" "lisp" "languages" "blockchain" "smartcontracts" "tools" "mode") :authors '(("Stuart Popejoy")) :maintainer '("Stuart Popejoy" . "stuart@kadena.io") :url "https://github.com/kadena-io/pact-mode")

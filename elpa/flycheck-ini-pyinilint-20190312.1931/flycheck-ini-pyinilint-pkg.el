@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "flycheck-ini-pyinilint" "20190312.1931" "Flycheck integration for PyINILint" '((flycheck "31")) :commit "b7ab452b6adbb9fc47c5a398d62f14eb23d8932c" :keywords '("convenience" "files" "tools") :authors '(("Daniel J. R. May" . "daniel.may@danieljrmay.com")) :maintainer '("Daniel J. R. May" . "daniel.may@danieljrmay.com") :url "https://gitlab.com/danieljrmay/flycheck-ini-pyinilint")

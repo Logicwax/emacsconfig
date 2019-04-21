@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "flycheck-pact" "20180920.2052" "Flycheck support for pact-mode" '((emacs "24.3") (flycheck "0.25") (pact-mode "0.0.4")) :commit "0e10045064ef89ec8b6f5a473073d47b976a2ca3" :keywords '("pact" "lisp" "languages" "blockchain" "smartcontracts" "tools" "linting") :authors '(("Stuart Popejoy")) :maintainer '("Stuart Popejoy" . "stuart@kadena.io") :url "http://github.com/kadena-io/flycheck-pact")
