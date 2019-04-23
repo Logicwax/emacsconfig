@@ -7,6 +7,7 @@
 
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
+(add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -39,7 +40,7 @@
      ("???" . "#dc752f"))))
  '(package-selected-packages
    (quote
-    (frame-tabs quarter-plane xclip indent-tools yaml-tomato flymake-yaml smart-mode-line-atom-one-dark-theme spacemacs-theme syntactic-close syntactic-sugar all-the-icons all-the-icons-dired all-the-icons-gnus all-the-icons-ivy ac-alchemist ac-c-headers ac-capf ac-cider ac-clang ac-dcd a c-emacs-eclim ac-emmet ac-emoji ac-etags ac-geiser ac-haskell-process ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-inf-ruby ac-ispell ac-js2 ac-math ac-mozc ac-octave ac-php ac-php-core ac-race r ac-rtags ac-skk ac-slime ac-sly arduino-mode auto-complete-auctex auto-complete-clang-async auto-complete-distel auto-complete-exuberant-ctags auto-complete-nxml auto-complete-pcmp auto-complete-rst auto-complete-sage auto-highlight-symbol auto-package-update cff company-irony company-terraform company-try-hard gildas-mode gist git git-attr git-auto-commit-mode git-command git-lens git-messenger gited indent-guide indent-info indent-t ools inline-crypt neotree night-owl-theme num3-mode pass passmm yalinum yaml-imenu yaml-mode coffee-mode company company-ebdb company-math company-statistics context-coloring diffview dired-git-info js2-mode json-mode on -screen auto-complete password-store auto-overlays auto-complete-clang auto-complete-chunk auto-complete-c-headers auto-auto-indent atom-one-dark-theme ansible-vault ansible-doc ansible)))
+    (smooth-scroll smooth-scrolling frame-tabs quarter-plane xclip indent-tools yaml-tomato flymake-yaml smart-mode-line-atom-one-dark-theme spacemacs-theme syntactic-close syntactic-sugar all-the-icons all-the-icons-dired all-the-icons-gnus all-the-icons-ivy ac-alchemist ac-c-headers ac-capf ac-cider ac-clang ac-dcd a c-emacs-eclim ac-emmet ac-emoji ac-etags ac-geiser ac-haskell-process ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-inf-ruby ac-ispell ac-js2 ac-math ac-mozc ac-octave ac-php ac-php-core ac-race r ac-rtags ac-skk ac-slime ac-sly arduino-mode auto-complete-auctex auto-complete-clang-async auto-complete-distel auto-complete-exuberant-ctags auto-complete-nxml auto-complete-pcmp auto-complete-rst auto-complete-sage auto-highlight-symbol auto-package-update cff company-irony company-terraform company-try-hard gildas-mode gist git git-attr git-auto-commit-mode git-command git-lens git-messenger gited indent-guide indent-info indent-t ools inline-crypt neotree night-owl-theme num3-mode pass passmm yalinum yaml-imenu yaml-mode coffee-mode company company-ebdb company-math company-statistics context-coloring diffview dired-git-info js2-mode json-mode on -screen auto-complete password-store auto-overlays auto-complete-clang auto-complete-chunk auto-complete-c-headers auto-auto-indent atom-one-dark-theme ansible-vault ansible-doc ansible)))
  '(pdf-view-midnight-colors (quote ("#b2b2b2" . "#262626")))
  '(tetris-x-colors
    [[229 192 123]
@@ -79,16 +80,13 @@
  )
 
 
-
 (load-theme 'atom-one-dark )
-
 
 (require 'auto-complete)
 (defun auto-complete-mode-maybe ()
  "No maybe for you. Only AC!"
  (unless (minibufferp (current-buffer))
    (auto-complete-mode 1)))
-
 
 
 (add-to-list 'default-frame-alist '(left-fringe . 8))
@@ -125,8 +123,6 @@
 
 (require 'neotree)
 (global-set-key [f8] 'neotree-toggle)
-
-
 
 
 (defun neotree-startup ()
@@ -167,11 +163,36 @@
 (xclip-mode 1)
 
 
-
-
 (require 'airline-themes)
 (load-theme 'airline-distinguished)
 
+
+  (require 'hlinum)
+    (hlinum-activate)
+
+;smooth-scrolling
+
+;; (setq mouse-wheel-scroll-amount '(10 ((shift) . 10)))
+;; (setq mouse-wheel-progressive-speed nil) 
+(setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
+(setq scroll-step 1) ;; keyboard scroll one line at a time
+
+
+(setq visible-bell t)
+(show-paren-mode t)
+;; to setup tabs
+(setq c-basic-indent 2)
+(setq tab-width 4)
+(setq indent-tabs-mode nil)
+
+
+;;(setq show-trailing-whitespace t)
+;;(setq-default show-trailing-whitespace t)
+(add-hook 'prog-mode-hook (lambda () (setq show-trailing-whitespace t)))    
+(add-hook 'html-mode-hook (lambda () (setq show-trailing-whitespace t)))    
+(add-hook 'css-mode-hook (lambda () (setq show-trailing-whitespace t)))     
+;;(add-hook 'org-mode-hook (lambda () (setq show-trailing-whitespace nil))) 
+(add-hook 'markdown-mode-hook (lambda () (setq show-trailing-whitespace t)))
 
 
 
