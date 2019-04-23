@@ -40,7 +40,7 @@
      ("???" . "#dc752f"))))
  '(package-selected-packages
    (quote
-    (smooth-scroll smooth-scrolling frame-tabs quarter-plane xclip indent-tools yaml-tomato flymake-yaml smart-mode-line-atom-one-dark-theme spacemacs-theme syntactic-close syntactic-sugar all-the-icons all-the-icons-dired all-the-icons-gnus all-the-icons-ivy ac-alchemist ac-c-headers ac-capf ac-cider ac-clang ac-dcd a c-emacs-eclim ac-emmet ac-emoji ac-etags ac-geiser ac-haskell-process ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-inf-ruby ac-ispell ac-js2 ac-math ac-mozc ac-octave ac-php ac-php-core ac-race r ac-rtags ac-skk ac-slime ac-sly arduino-mode auto-complete-auctex auto-complete-clang-async auto-complete-distel auto-complete-exuberant-ctags auto-complete-nxml auto-complete-pcmp auto-complete-rst auto-complete-sage auto-highlight-symbol auto-package-update cff company-irony company-terraform company-try-hard gildas-mode gist git git-attr git-auto-commit-mode git-command git-lens git-messenger gited indent-guide indent-info indent-t ools inline-crypt neotree night-owl-theme num3-mode pass passmm yalinum yaml-imenu yaml-mode coffee-mode company company-ebdb company-math company-statistics context-coloring diffview dired-git-info js2-mode json-mode on -screen auto-complete password-store auto-overlays auto-complete-clang auto-complete-chunk auto-complete-c-headers auto-auto-indent atom-one-dark-theme ansible-vault ansible-doc ansible)))
+    (mode-line-bell mode-line-debug smooth-scroll smooth-scrolling frame-tabs quarter-plane xclip indent-tools yaml-tomato flymake-yaml smart-mode-line-atom-one-dark-theme spacemacs-theme syntactic-close syntactic-sugar all-the-icons all-the-icons-dired all-the-icons-gnus all-the-icons-ivy ac-alchemist ac-c-headers ac-capf ac-cider ac-clang ac-dcd a c-emacs-eclim ac-emmet ac-emoji ac-etags ac-geiser ac-haskell-process ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-inf-ruby ac-ispell ac-js2 ac-math ac-mozc ac-octave ac-php ac-php-core ac-race r ac-rtags ac-skk ac-slime ac-sly arduino-mode auto-complete-auctex auto-complete-clang-async auto-complete-distel auto-complete-exuberant-ctags auto-complete-nxml auto-complete-pcmp auto-complete-rst auto-complete-sage auto-highlight-symbol auto-package-update cff company-irony company-terraform company-try-hard gildas-mode gist git git-attr git-auto-commit-mode git-command git-lens git-messenger gited indent-guide indent-info indent-t ools inline-crypt neotree night-owl-theme num3-mode pass passmm yalinum yaml-imenu yaml-mode coffee-mode company company-ebdb company-math company-statistics context-coloring diffview dired-git-info js2-mode json-mode on -screen auto-complete password-store auto-overlays auto-complete-clang auto-complete-chunk auto-complete-c-headers auto-auto-indent atom-one-dark-theme ansible-vault ansible-doc ansible)))
  '(pdf-view-midnight-colors (quote ("#b2b2b2" . "#262626")))
  '(tetris-x-colors
    [[229 192 123]
@@ -214,7 +214,7 @@
                (add-to-list 'symbol-overlay-faces '(symbol-overlay-default-face . (shakra-orange)))))
 
 
-
+;; symbol highlighting
 (require 'symbol-overlay)
 (defun enable-symbol-overlay-mode ()
   (unless (or (minibufferp)
@@ -227,3 +227,18 @@
 (global-symbol-overlay-mode)                         ;; enable it
 (global-set-key (kbd "s-`") 'symbol-overlay-put)
 (setq symbol-overlay-map (make-sparse-keymap))       ;; disable special cmds on overlays
+
+
+
+;; allow easy copying to clipboard in macOS / OSX
+(defun copy-to-osx ()
+(shell-command-to-string "pbpaste"))
+
+(defun paste-to-osx (text &optional push)
+(let ((process-connection-type nil))
+(let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
+(process-send-string proc text)
+(process-send-eof proc))))
+
+(setq interprogram-cut-function 'paste-to-osx)
+(setq interprogram-paste-function 'copy-to-osx)
