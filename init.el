@@ -194,5 +194,22 @@
 ;;(add-hook 'org-mode-hook (lambda () (setq show-trailing-whitespace nil))) 
 (add-hook 'markdown-mode-hook (lambda () (setq show-trailing-whitespace t)))
 
+(setq show-trailing-whitespace t)
+
+
+(use-package symbol-overlay                                                                         
+  :ensure t
+  :defer t
+  :hook (prog-mode . symbol-overlay-mode)
+        (html-mode . symbol-overlay-mode)
+        (web-mode . symbol-overlay-mode)
+        (css-mode . symbol-overlay-mode)
+        (yaml-mode . symbol-overlay-mode)
+        (toml-mode . symbol-overlay-mode)
+        (json-mode . symbol-overlay-mode)
+  :config
+        (progn (defface shackra-orange '((t (:foreground "white" :background "#98fbb8"))) "") 
+               (add-to-list 'symbol-overlay-faces '(symbol-overlay-default-face . (shakra-orange)))))
+
 
 
