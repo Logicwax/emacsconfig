@@ -152,9 +152,9 @@
 
 
 ;; Enable mouse support for OSX
-;;  (unless window-system
-;;    (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
-;;    (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
+  (unless window-system
+    (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
+    (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
 
 
 ;; integrate clipboard with x11
