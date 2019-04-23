@@ -197,10 +197,12 @@
 (setq show-trailing-whitespace t)
 
 
-(use-package symbol-overlay                                                                         
+(use-package symbol-overlay
   :ensure t
   :defer t
   :hook (prog-mode . symbol-overlay-mode)
+        (text-mode . symbol-overlay-mode)
+        (fundamental-mode . symbol-overlay-mode)
         (html-mode . symbol-overlay-mode)
         (web-mode . symbol-overlay-mode)
         (css-mode . symbol-overlay-mode)
@@ -213,3 +215,15 @@
 
 
 
+(require 'symbol-overlay)
+(defun enable-symbol-overlay-mode ()
+  (unless (or (minibufferp)
+              (derived-mode-p 'magit-mode)
+              (derived-mode-p 'xref--xref-buffer-mode))
+    (symbol-overlay-mode t)))
+(define-global-minor-mode global-symbol-overlay-mode ;; name of the new global mode
+  symbol-overlay-mode                                ;; name of the minor mode
+  enable-symbol-overlay-mode)
+(global-symbol-overlay-mode)                         ;; enable it
+(global-set-key (kbd "s-`") 'symbol-overlay-put)
+(setq symbol-overlay-map (make-sparse-keymap))       ;; disable special cmds on overlays
