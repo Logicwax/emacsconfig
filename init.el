@@ -126,7 +126,7 @@
 (scroll-bar-mode -1)
 
 (require 'highlight-indent-guides)
-(highlight-indent-guides-mode)
+;; (highlight-indent-guides-mode)
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 (add-hook 'text-mode-hook 'highlight-indent-guides-mode)
 (add-hook 'GNUmake-mode-hook 'highlight-indent-guides-mode)
