@@ -4,7 +4,6 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
-
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/") t)
 (add-to-list 'package-archives '("org" . "https://orgmode.org/elpa/") t)
@@ -82,13 +81,6 @@
 
 (load-theme 'atom-one-dark )
 
-(require 'auto-complete)
-(defun auto-complete-mode-maybe ()
- "No maybe for you. Only AC!"
- (unless (minibufferp (current-buffer))
-   (auto-complete-mode 1)))
-
-
 (add-to-list 'default-frame-alist '(left-fringe . 8))
 (add-to-list 'default-frame-alist '(right-fringe . 8))
 
@@ -102,19 +94,9 @@
 
 (global-linum-mode)
 
-(ac-config-default)
+
 (xterm-mouse-mode)
 (global-hl-line-mode)
-
-(require 'auto-complete-config)
-(ac-config-default)
-(setq-default ac-sources
-         '(
-       ac-source-filename
-       ac-source-abbrev 
-       ac-source-dictionary
-       ac-source-words-in-same-mode-buffers))
-(ac-config-default)
 
 ; (add-to-list 'load-path "~/.emacs.d/vendor/neotree")
 (setq make-backup-files nil) ; stop creating those backup~ files
@@ -138,7 +120,6 @@
 (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
 
 
-
 (setq linum-format "%4d \u2502 ")
 (powerline-default-theme)
 
@@ -150,12 +131,10 @@
 (add-hook 'text-mode-hook 'highlight-indent-guides-mode)
 (add-hook 'GNUmake-mode-hook 'highlight-indent-guides-mode)
 
-
 ;; Enable mouse support for OSX
   (unless window-system
     (global-set-key (kbd "<mouse-4>") 'scroll-down-line)
     (global-set-key (kbd "<mouse-5>") 'scroll-up-line))
-
 
 ;; integrate clipboard with x11
  (add-to-list 'load-path "~/.emacs.d/elpa/xclip-1.3/")
@@ -173,7 +152,7 @@
 ;smooth-scrolling
 
 ;; (setq mouse-wheel-scroll-amount '(10 ((shift) . 10)))
-;; (setq mouse-wheel-progressive-speed nil) 
+;; (setq mouse-wheel-progressive-speed nil)
 (setq mouse-wheel-follow-mouse 't) ;; scroll window under mouse
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 
@@ -188,10 +167,10 @@
 
 ;;(setq show-trailing-whitespace t)
 ;;(setq-default show-trailing-whitespace t)
-(add-hook 'prog-mode-hook (lambda () (setq show-trailing-whitespace t)))    
-(add-hook 'html-mode-hook (lambda () (setq show-trailing-whitespace t)))    
-(add-hook 'css-mode-hook (lambda () (setq show-trailing-whitespace t)))     
-;;(add-hook 'org-mode-hook (lambda () (setq show-trailing-whitespace nil))) 
+(add-hook 'prog-mode-hook (lambda () (setq show-trailing-whitespace t)))
+(add-hook 'html-mode-hook (lambda () (setq show-trailing-whitespace t)))
+(add-hook 'css-mode-hook (lambda () (setq show-trailing-whitespace t)))
+;;(add-hook 'org-mode-hook (lambda () (setq show-trailing-whitespace nil)))
 (add-hook 'markdown-mode-hook (lambda () (setq show-trailing-whitespace t)))
 
 (setq show-trailing-whitespace t)
@@ -210,7 +189,7 @@
         (toml-mode . symbol-overlay-mode)
         (json-mode . symbol-overlay-mode)
   :config
-        (progn (defface shackra-orange '((t (:foreground "white" :background "#98fbb8"))) "") 
+        (progn (defface shackra-orange '((t (:foreground "white" :background "#98fbb8"))) "")
                (add-to-list 'symbol-overlay-faces '(symbol-overlay-default-face . (shakra-orange)))))
 
 
@@ -229,16 +208,40 @@
 (setq symbol-overlay-map (make-sparse-keymap))       ;; disable special cmds on overlays
 
 
+;; hacks to make OSX copy and paste work
+ (defun clipboard-on ()
+    (interactive)
+    (setq interprogram-cut-function 'paste-to-osx)
+    (setq interprogram-paste-function 'copy-from-osx))
+  (defun clipboard-off ()
+    (interactive)
+    (setq interprogram-cut-function 'gui-select-text)
+    (setq interprogram-paste-function 'gui-selection-value))
+  (global-set-key (kbd "C-c C-p") 'clipboard-on)
+(global-set-key (kbd "C-c C-y") 'clipboard-off)
 
-;; allow easy copying to clipboard in macOS / OSX
-(defun copy-to-osx ()
-(shell-command-to-string "pbpaste"))
 
-(defun paste-to-osx (text &optional push)
-(let ((process-connection-type nil))
-(let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
-(process-send-string proc text)
-(process-send-eof proc))))
+ (setq tab-width 4) ; or any other preferred value
+    (defvaralias 'c-basic-offset 'tab-width)
+    (defvaralias 'cperl-indent-level 'tab-width)
 
-(setq interprogram-cut-function 'paste-to-osx)
-(setq interprogram-paste-function 'copy-to-osx)
+
+;; Load auto-complete last because we want fast load times.
+(require 'auto-complete)
+(defun auto-complete-mode-maybe ()
+ "No maybe for you. Only AC!"
+ (unless (minibufferp (current-buffer))
+   (auto-complete-mode 1)))
+
+(ac-config-default)
+
+(require 'auto-complete-config)
+(ac-config-default)
+(setq-default ac-sources
+         '(
+       ac-source-filename
+       ac-source-abbrev 
+       ac-source-dictionary
+       ac-source-words-in-same-mode-buffers))
+(ac-config-default)
+
