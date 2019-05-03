@@ -81,6 +81,8 @@
 
 (load-theme 'atom-one-dark )
 
+(setq-default major-mode 'text-mode)
+
 (add-to-list 'default-frame-alist '(left-fringe . 8))
 (add-to-list 'default-frame-alist '(right-fringe . 8))
 
@@ -125,11 +127,12 @@
 
 (scroll-bar-mode -1)
 
+
 (require 'highlight-indent-guides)
-;; (highlight-indent-guides-mode)
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 (add-hook 'text-mode-hook 'highlight-indent-guides-mode)
 (add-hook 'GNUmake-mode-hook 'highlight-indent-guides-mode)
+
 
 ;; Enable mouse support for OSX
   (unless window-system
