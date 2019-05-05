@@ -1,4 +1,4 @@
-# Logicwax ~/.emacs.d setup
+# Logicwax's ~/.emacs.d config
 
 <http://github.com/logicwax/emacsconfig>
 
@@ -10,10 +10,3 @@ Clone .emacs.d directory
  ```
 git clone https://github.com/logicwax/emacsconfig.git ~/.emacs.d
 ```
- 
-Or alternatively
-
- ```
-git clone https://github.com/logicwax/emacsconfig.git ~/.emacs.d
-```
-
