@@ -125,9 +125,6 @@
 (setq linum-format "%4d \u2502 ")
 (powerline-default-theme)
 
-(scroll-bar-mode -1)
-
-
 (require 'highlight-indent-guides)
 (add-hook 'prog-mode-hook 'highlight-indent-guides-mode)
 (add-hook 'text-mode-hook 'highlight-indent-guides-mode)
@@ -243,7 +240,7 @@
 (setq-default ac-sources
          '(
        ac-source-filename
-       ac-source-abbrev 
+       ac-source-abbrev
        ac-source-dictionary
        ac-source-words-in-same-mode-buffers))
 (ac-config-default)
