@@ -16,12 +16,11 @@
  '(ansi-color-names-vector
    ["#080808" "#d70000" "#67b11d" "#875f00" "#268bd2" "#af00df" "#00ffff" "#b2b2b2"])
  '(custom-safe-themes
-   (quote
-    ("64ca5a1381fa96cb86fd6c6b4d75b66dc9c4e0fc1288ee7d914ab8d2638e23a9" "1b27e3b3fce73b72725f3f7f040fd03081b576b1ce8bbdfcb0212920aec190ad" "c79c2eadd3721e92e42d2fefc756eef8c7d248f9edefd57c4887fbf68f0a17af" "b181ea0cc32303da7f9227361bb051bbb6c3105bb4f386ca22a06db319b08882" "b563a87aa29096e0b2e38889f7a5e3babde9982262181b65de9ce8b78e9324d5" "da538070dddb68d64ef6743271a26efd47fbc17b52cc6526d932b9793f92b718" "de0b7245463d92cba3362ec9fe0142f54d2bf929f971a8cdf33c0bf995250bcf" "3eb93cd9a0da0f3e86b5d932ac0e3b5f0f50de7a0b805d4eb1f67782e9eb67a4" "d61f6c49e5db58533d4543e33203fd1c41a316eddb0b18a44e0ce428da86ef98" "721bb3cb432bb6be7c58be27d583814e9c56806c06b4077797074b009f322509" "b59d7adea7873d58160d368d42828e7ac670340f11f36f67fa8071dbf957236a" "e30f381d0e460e5b643118bcd10995e1ba3161a3d45411ef8dfe34879c9ae333" "003a9aa9e4acb50001a006cfde61a6c3012d373c4763b48ceb9d523ceba66829" "d21135150e22e58f8c656ec04530872831baebf5a1c3688030d119c114233c24" "9b1c580339183a8661a84f5864a6c363260c80136bd20ac9f00d7e1d662e936a" "3fa07dd06f4aff80df2d820084db9ecbc007541ce7f15474f1d956c846a3238f" "2b8dff32b9018d88e24044eb60d8f3829bd6bbeab754e70799b78593af1c3aba" "01e067188b0b53325fc0a1c6e06643d7e52bc16b6653de2926a480861ad5aa78" "c616e584f7268aa3b63d08045a912b50863a34e7ea83e35fcab8537b75741956" "251348dcb797a6ea63bbfe3be4951728e085ac08eee83def071e4d2e3211acc3" "946e871c780b159c4bb9f580537e5d2f7dba1411143194447604ecbaf01bd90c" "2642a1b7f53b9bb34c7f1e032d2098c852811ec2881eec2dc8cc07be004e45a0" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "2a7beed4f24b15f77160118320123d699282cbf196e0089f113245d4b729ba5d" "bf5bdab33a008333648512df0d2b9d9710bdfba12f6a768c7d2c438e1092b633" default)))
+   '("8a19e3650988e71cf24b574ee1349c29a1528ed4be506cedc6f15a1ecc9d2355" "64ca5a1381fa96cb86fd6c6b4d75b66dc9c4e0fc1288ee7d914ab8d2638e23a9" "1b27e3b3fce73b72725f3f7f040fd03081b576b1ce8bbdfcb0212920aec190ad" "c79c2eadd3721e92e42d2fefc756eef8c7d248f9edefd57c4887fbf68f0a17af" "b181ea0cc32303da7f9227361bb051bbb6c3105bb4f386ca22a06db319b08882" "b563a87aa29096e0b2e38889f7a5e3babde9982262181b65de9ce8b78e9324d5" "da538070dddb68d64ef6743271a26efd47fbc17b52cc6526d932b9793f92b718" "de0b7245463d92cba3362ec9fe0142f54d2bf929f971a8cdf33c0bf995250bcf" "3eb93cd9a0da0f3e86b5d932ac0e3b5f0f50de7a0b805d4eb1f67782e9eb67a4" "d61f6c49e5db58533d4543e33203fd1c41a316eddb0b18a44e0ce428da86ef98" "721bb3cb432bb6be7c58be27d583814e9c56806c06b4077797074b009f322509" "b59d7adea7873d58160d368d42828e7ac670340f11f36f67fa8071dbf957236a" "e30f381d0e460e5b643118bcd10995e1ba3161a3d45411ef8dfe34879c9ae333" "003a9aa9e4acb50001a006cfde61a6c3012d373c4763b48ceb9d523ceba66829" "d21135150e22e58f8c656ec04530872831baebf5a1c3688030d119c114233c24" "9b1c580339183a8661a84f5864a6c363260c80136bd20ac9f00d7e1d662e936a" "3fa07dd06f4aff80df2d820084db9ecbc007541ce7f15474f1d956c846a3238f" "2b8dff32b9018d88e24044eb60d8f3829bd6bbeab754e70799b78593af1c3aba" "01e067188b0b53325fc0a1c6e06643d7e52bc16b6653de2926a480861ad5aa78" "c616e584f7268aa3b63d08045a912b50863a34e7ea83e35fcab8537b75741956" "251348dcb797a6ea63bbfe3be4951728e085ac08eee83def071e4d2e3211acc3" "946e871c780b159c4bb9f580537e5d2f7dba1411143194447604ecbaf01bd90c" "2642a1b7f53b9bb34c7f1e032d2098c852811ec2881eec2dc8cc07be004e45a0" "bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "fa2b58bb98b62c3b8cf3b6f02f058ef7827a8e497125de0254f56e373abee088" "2a7beed4f24b15f77160118320123d699282cbf196e0089f113245d4b729ba5d" "bf5bdab33a008333648512df0d2b9d9710bdfba12f6a768c7d2c438e1092b633" default))
  '(fci-rule-color "#2e2e2e")
+ '(global-display-line-numbers-mode t)
  '(hl-todo-keyword-faces
-   (quote
-    (("TODO" . "#dc752f")
+   '(("TODO" . "#dc752f")
      ("NEXT" . "#dc752f")
      ("THEM" . "#2aa198")
      ("PROG" . "#268bd2")
@@ -36,11 +35,12 @@
      ("FIXME" . "#dc752f")
      ("XXX" . "#dc752f")
      ("XXXX" . "#dc752f")
-     ("???" . "#dc752f"))))
+     ("???" . "#dc752f")))
  '(package-selected-packages
-   (quote
-    (mode-line-bell mode-line-debug smooth-scroll smooth-scrolling frame-tabs quarter-plane xclip indent-tools yaml-tomato flymake-yaml smart-mode-line-atom-one-dark-theme spacemacs-theme syntactic-close syntactic-sugar all-the-icons all-the-icons-dired all-the-icons-gnus all-the-icons-ivy ac-alchemist ac-c-headers ac-capf ac-cider ac-clang ac-dcd a c-emacs-eclim ac-emmet ac-emoji ac-etags ac-geiser ac-haskell-process ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-inf-ruby ac-ispell ac-js2 ac-math ac-mozc ac-octave ac-php ac-php-core ac-race r ac-rtags ac-skk ac-slime ac-sly arduino-mode auto-complete-auctex auto-complete-clang-async auto-complete-distel auto-complete-exuberant-ctags auto-complete-nxml auto-complete-pcmp auto-complete-rst auto-complete-sage auto-highlight-symbol auto-package-update cff company-irony company-terraform company-try-hard gildas-mode gist git git-attr git-auto-commit-mode git-command git-lens git-messenger gited indent-guide indent-info indent-t ools inline-crypt neotree night-owl-theme num3-mode pass passmm yalinum yaml-imenu yaml-mode coffee-mode company company-ebdb company-math company-statistics context-coloring diffview dired-git-info js2-mode json-mode on -screen auto-complete password-store auto-overlays auto-complete-clang auto-complete-chunk auto-complete-c-headers auto-auto-indent atom-one-dark-theme ansible-vault ansible-doc ansible)))
- '(pdf-view-midnight-colors (quote ("#b2b2b2" . "#262626")))
+   '(dash highlight-indentation airline-themes flycheck highlight-indent-guides helm powerline mode-line-bell mode-line-debug smooth-scroll smooth-scrolling frame-tabs quarter-plane xclip indent-tools yaml-tomato flymake-yaml smart-mode-line-atom-one-dark-theme spacemacs-theme syntactic-close syntactic-sugar all-the-icons all-the-icons-dired all-the-icons-gnus all-the-icons-ivy ac-alchemist ac-c-headers ac-capf ac-cider ac-clang ac-dcd a c-emacs-eclim ac-emmet ac-emoji ac-etags ac-geiser ac-haskell-process ac-helm ac-html ac-html-angular ac-html-bootstrap ac-html-csswatcher ac-inf-ruby ac-ispell ac-js2 ac-math ac-mozc ac-octave ac-php ac-php-core ac-race r ac-rtags ac-skk ac-slime ac-sly arduino-mode auto-complete-auctex auto-complete-clang-async auto-complete-distel auto-complete-exuberant-ctags auto-complete-nxml auto-complete-pcmp auto-complete-rst auto-complete-sage auto-highlight-symbol auto-package-update cff company-irony company-terraform company-try-hard gildas-mode gist git git-attr git-auto-commit-mode git-command git-lens git-messenger gited indent-guide indent-info indent-t ools inline-crypt neotree night-owl-theme num3-mode pass passmm yalinum yaml-imenu yaml-mode coffee-mode company company-ebdb company-math company-statistics context-coloring diffview dired-git-info js2-mode json-mode on -screen auto-complete password-store auto-overlays auto-complete-clang auto-complete-chunk auto-complete-c-headers auto-auto-indent atom-one-dark-theme ansible-vault ansible-doc ansible))
+ '(pdf-view-midnight-colors '("#b2b2b2" . "#262626"))
+ '(size-indication-mode t)
+ '(tab-bar-mode t)
  '(tetris-x-colors
    [[229 192 123]
     [97 175 239]
@@ -51,8 +51,7 @@
     [86 182 194]])
  '(vc-annotate-background "#3b3b3b")
  '(vc-annotate-color-map
-   (quote
-    ((20 . "#dd5542")
+   '((20 . "#dd5542")
      (40 . "#CC5542")
      (60 . "#fb8512")
      (80 . "#baba36")
@@ -69,7 +68,7 @@
      (300 . "#528fd1")
      (320 . "#5180b3")
      (340 . "#6380b3")
-     (360 . "#DC8CC3"))))
+     (360 . "#DC8CC3")))
  '(vc-annotate-very-old-color "#DC8CC3"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
@@ -94,7 +93,7 @@
    (t
     :background "cyan")))
 
-(global-linum-mode)
+(global-display-line-numbers-mode 1)
 
 
 (xterm-mouse-mode)
